@@ -1,0 +1,1 @@
+SELECT ROUND(rental_rate/replacement_cost,4)*1000 FROM film
