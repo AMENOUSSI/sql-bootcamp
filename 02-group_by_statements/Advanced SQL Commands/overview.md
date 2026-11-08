@@ -1,0 +1,5 @@
+- Timestamps and EXTRACT
+- Math Functions
+- String Functions
+- Sub-query
+- Self-Join
