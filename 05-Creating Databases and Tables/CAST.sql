@@ -1,0 +1,5 @@
+SELECT CAST('5' AS INTEGER) AS new_int;
+SELECT '23'::INTEGER;
+
+SELECT * FROM rental;
+SELECT CAST(inventory_id AS VARCHAR) FROM rental;
