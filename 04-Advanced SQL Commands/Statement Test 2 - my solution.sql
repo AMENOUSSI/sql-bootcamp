@@ -72,3 +72,5 @@ ON f.facid = b.facid
 WHERE f.name LIKE '%Tennis Court%'
 AND Date(starttime) = '2012-09-21'
 ORDER BY starttime;
+
+SELECT * FROM cd.bookings;
