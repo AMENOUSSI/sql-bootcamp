@@ -52,7 +52,8 @@ WHERE guestcost >= 10;
 -- 11. Produce a list of the total number of slots booked per facility in the month of september 2012
 SELECT facid, SUM(slots) as "Total Slots"
 FROM cd.bookings
-WHERE starttime BETWEEN '2012-09-01' AND '2012-09-30'
+-- starttime is a timestamp: BETWEEN ... '2012-09-30' would stop at midnight and miss the last day
+WHERE starttime >= '2012-09-01' AND starttime < '2012-10-01'
 GROUP BY facid
 ORDER BY SUM(slots) ASC;
 
@@ -61,7 +62,7 @@ ORDER BY SUM(slots) ASC;
 SELECT facid, SUM(slots) total_slots
 FROM cd.bookings
 GROUP BY facid
-HAVING SUM(slots) >= 1000
+HAVING SUM(slots) > 1000
 ORDER BY facid;
 
 -- 13. How can produce the list of the start times for bookings for tennis courts for the date '2012-09-21'?

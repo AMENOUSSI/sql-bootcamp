@@ -81,7 +81,7 @@ cur.execute(query1)
 # In[ ]:
 
 # commit the changes to the database
-cur.commit()
+conn.commit()
 
 
 # In[ ]:
